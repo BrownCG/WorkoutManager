@@ -7,7 +7,10 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Primary">#A40000</Color>
+            <Color x:Key="BG">#0F0F0F</Color>
+            <Color x:Key="DefaultTextColor">#c5d4d1</Color>
+            
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
@@ -26,6 +29,9 @@
                         </VisualStateGroup>
                     </VisualStateGroupList>
                 </Setter>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource DefaultTextColor}"></Setter>
             </Style>
         </ResourceDictionary>        
     </Application.Resources>

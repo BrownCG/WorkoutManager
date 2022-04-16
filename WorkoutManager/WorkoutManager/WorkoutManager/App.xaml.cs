@@ -4,6 +4,7 @@ using WorkoutManager.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace WorkoutManager
 {
     public partial class App : Application
