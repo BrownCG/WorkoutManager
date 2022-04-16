@@ -7,9 +7,13 @@ namespace WorkoutManager.Entities
 {
     public class WorkoutEntity
     {
+        #region Properties
         public Workout WorkoutRecord { get; set; }
 
         public Guid Id { get; set; }
+
+        public DateTime ScheduledDate { get; set; }
+        #endregion
 
         public TimeSpan WorkoutDuration { 
             get { 
@@ -22,8 +26,19 @@ namespace WorkoutManager.Entities
             } 
         }
 
-        public double PercentCompleted { get; set; }
+        public double PercentCompleted { 
+            get {
+                int totalComplete = 0;
+                for (int i = 0; i < WorkoutRecord.Exercises.Length; i++)
+                {
+                    if (WorkoutRecord.Exercises[i] != null && WorkoutRecord.Exercises[i].Completed)
+                    {
+                        totalComplete++;
+                    }
+                }
+                return (double)totalComplete/(WorkoutRecord.Exercises.Length);
+            }
+        }
 
-        public DateTime ScheduledDate { get; set; }
     }
 }

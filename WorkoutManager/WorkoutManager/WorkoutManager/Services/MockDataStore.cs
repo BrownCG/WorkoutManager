@@ -66,6 +66,11 @@ namespace WorkoutManager.Services
             return await Task.FromResult(items);
         }
 
+        public async Task<IEnumerable<Exercise>> GetExercisesAsync(bool forceRefresh = false)
+        {
+            return await Task.FromResult(exercises);
+        }
+
         #region ExampleExercises
         private List<Exercise> GetExercises()
         {
@@ -123,7 +128,9 @@ namespace WorkoutManager.Services
         private List<Workout> GetWorkouts()
         {
             var workouts = new List<Workout>();
-            var armWorkout = new Workout { Description = "Bicep Blaster", Id = Guid.NewGuid().ToString(), 
+            var armWorkout = new Workout { 
+                Description = "Bicep Blaster", 
+                Id = Guid.NewGuid().ToString(), 
                 Exercises = new Exercise[] { exercises[0], exercises[1] }, Name = "Arms"
             };
             var totalWorkout = new Workout

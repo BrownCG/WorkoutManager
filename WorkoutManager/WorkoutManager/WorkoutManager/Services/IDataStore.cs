@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using WorkoutManager.Models;
 
 namespace WorkoutManager.Services
 {
@@ -11,5 +12,7 @@ namespace WorkoutManager.Services
         Task<bool> DeleteItemAsync(string id);
         Task<T> GetItemAsync(string id);
         Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
+
+        Task<IEnumerable<Exercise>> GetExercisesAsync(bool forceRefresh = false);
     }
 }
