@@ -14,5 +14,7 @@ namespace WorkoutManager.Services
         Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
 
         Task<IEnumerable<Exercise>> GetExercisesAsync(bool forceRefresh = false);
+
+        Task<bool> AddExerciseAsync(Exercise exercise);
     }
 }

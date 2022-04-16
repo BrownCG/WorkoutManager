@@ -66,6 +66,12 @@ namespace WorkoutManager.Services
             return await Task.FromResult(items);
         }
 
+        public async Task<bool> AddExerciseAsync(Exercise exercise)
+        {
+            exercises.Add(exercise);
+            return await Task.FromResult(true);
+        }
+
         public async Task<IEnumerable<Exercise>> GetExercisesAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(exercises);
