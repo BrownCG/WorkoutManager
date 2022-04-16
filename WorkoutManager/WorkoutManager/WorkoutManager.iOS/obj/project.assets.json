@@ -982,20 +982,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pdxor\\.nuget\\packages\\": {}
+    "C:\\Users\\Idean\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pdxor\\repos\\WorkoutManager\\WorkoutManager\\WorkoutManager\\WorkoutManager.iOS\\WorkoutManager.iOS.csproj",
+      "projectUniqueName": "C:\\repos\\WorkoutManager\\WorkoutManager\\WorkoutManager\\WorkoutManager.iOS\\WorkoutManager.iOS.csproj",
       "projectName": "WorkoutManager.iOS",
-      "projectPath": "C:\\Users\\pdxor\\repos\\WorkoutManager\\WorkoutManager\\WorkoutManager\\WorkoutManager.iOS\\WorkoutManager.iOS.csproj",
-      "packagesPath": "C:\\Users\\pdxor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pdxor\\repos\\WorkoutManager\\WorkoutManager\\WorkoutManager\\WorkoutManager.iOS\\obj\\",
+      "projectPath": "C:\\repos\\WorkoutManager\\WorkoutManager\\WorkoutManager\\WorkoutManager.iOS\\WorkoutManager.iOS.csproj",
+      "packagesPath": "C:\\Users\\Idean\\.nuget\\packages\\",
+      "outputPath": "C:\\repos\\WorkoutManager\\WorkoutManager\\WorkoutManager\\WorkoutManager.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\pdxor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Idean\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1008,8 +1008,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\pdxor\\repos\\WorkoutManager\\WorkoutManager\\WorkoutManager\\WorkoutManager\\WorkoutManager.csproj": {
-              "projectPath": "C:\\Users\\pdxor\\repos\\WorkoutManager\\WorkoutManager\\WorkoutManager\\WorkoutManager\\WorkoutManager.csproj"
+            "C:\\repos\\WorkoutManager\\WorkoutManager\\WorkoutManager\\WorkoutManager\\WorkoutManager.csproj": {
+              "projectPath": "C:\\repos\\WorkoutManager\\WorkoutManager\\WorkoutManager\\WorkoutManager\\WorkoutManager.csproj"
             }
           }
         }
