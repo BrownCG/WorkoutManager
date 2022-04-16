@@ -10,6 +10,11 @@ namespace WorkoutManager.Services
     {
         readonly List<Item> items;
 
+        private List<Workout> workouts { get; set; }
+
+        private List<Exercise> exercises { get; set; }
+
+
         public MockDataStore()
         {
             items = new List<Item>()
@@ -21,6 +26,10 @@ namespace WorkoutManager.Services
                 new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
                 new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
             };
+
+            exercises = GetExercises();
+
+            workouts = GetWorkouts();
         }
 
         public async Task<bool> AddItemAsync(Item item)
@@ -56,5 +65,79 @@ namespace WorkoutManager.Services
         {
             return await Task.FromResult(items);
         }
+
+        #region ExampleExercises
+        private List<Exercise> GetExercises()
+        {
+            var fiftyLbCurls = new Exercise
+            {
+                Id = Guid.NewGuid().ToString(),
+                Completed = false,
+                Duration = TimeSpan.Zero,
+                Name = "50lb curl",
+                Sets = new Set[] {
+                    new Set { Id = Guid.NewGuid().ToString(), Repetitions = 8, Weight = 50},
+                    new Set { Id = Guid.NewGuid().ToString(), Repetitions = 8, Weight = 50 },
+                    new Set { Id = Guid.NewGuid().ToString(), Repetitions = 6, Weight = 50 },
+                }
+            };
+
+            var seventyLbCurls = new Exercise
+            {
+                Id = Guid.NewGuid().ToString(),
+                Completed = false,
+                Duration = TimeSpan.Zero,
+                Name = "70lb curl",
+                Sets = new Set[] {
+                    new Set { Id = Guid.NewGuid().ToString(), Repetitions = 6, Weight = 70},
+                    new Set { Id = Guid.NewGuid().ToString(), Repetitions = 6, Weight = 70 },
+                    new Set { Id = Guid.NewGuid().ToString(), Repetitions = 4, Weight = 70 },
+                }
+            };
+
+            var sitUps = new Exercise
+            {
+                Id = Guid.NewGuid().ToString(),
+                Completed = false,
+                Duration = TimeSpan.Zero,
+                Name = "SitUps",
+                Sets = new Set[] {
+                    new Set { Id = Guid.NewGuid().ToString(), Repetitions = 20, Weight = -1},
+                    new Set { Id = Guid.NewGuid().ToString(), Repetitions = 20, Weight = -1 },
+                    new Set { Id = Guid.NewGuid().ToString(), Repetitions = 20, Weight = -1 },
+                }
+            };
+
+            var exampleExercises = new List<Exercise>
+            {
+                fiftyLbCurls,
+                seventyLbCurls,
+                sitUps
+            };
+
+            return exampleExercises;
+        }
+        #endregion
+
+        #region ExampleWorkouts
+        private List<Workout> GetWorkouts()
+        {
+            var workouts = new List<Workout>();
+            var armWorkout = new Workout { Description = "Bicep Blaster", Id = Guid.NewGuid().ToString(), 
+                Exercises = new Exercise[] { exercises[0], exercises[1] }, Name = "Arms"
+            };
+            var totalWorkout = new Workout
+            {
+                Description = "All Your Exercises",
+                Id = Guid.NewGuid().ToString(),
+                Exercises = exercises.ToArray(),
+                Name = "Everything"
+            };
+            workouts.Add(armWorkout);
+            workouts.Add(totalWorkout);
+
+            return workouts;
+        }
+        #endregion
     }
 }
