@@ -5,8 +5,9 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkoutManager.Android", "WorkoutManager\WorkoutManager.Android\WorkoutManager.Android.csproj", "{463F29CD-370F-451B-AFC1-BA657600E560}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkoutManager.iOS", "WorkoutManager\WorkoutManager.iOS\WorkoutManager.iOS.csproj", "{A066DB99-1055-4E28-9BA1-06344EC7D595}"
-EndProject
+#Enable IOS at later date
+#Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkoutManager.iOS", "WorkoutManager\WorkoutManager.iOS\WorkoutManager.iOS.csproj", "{A066DB99-1055-4E28-9BA1-06344EC7D595}"
+#EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkoutManager", "WorkoutManager\WorkoutManager\WorkoutManager.csproj", "{826A2E11-58F3-4097-869A-E872CFAB395F}"
 EndProject
 Global
