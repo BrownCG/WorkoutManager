@@ -25,7 +25,7 @@ namespace WorkoutManager.ViewModels
 
             ExerciseTapped = new Command<Exercise>(OnExerciseSelected);
 
-            AddExerciseCommand = new Command(OnAddExercise);
+            //AddExerciseCommand = new Command(OnAddExercise);
         }
 
         async Task ExecuteLoadExercisesCommand()
@@ -67,10 +67,10 @@ namespace WorkoutManager.ViewModels
             }
         }
 
-        private async void OnAddExercise(object obj)
-        {
-            await Shell.Current.GoToAsync(nameof(NewExercisePage));
-        }
+        //private async void OnAddExercise(object obj)
+        //{
+        //    await Shell.Current.GoToAsync(nameof(NewExercisePage));
+        //}
 
         async void OnExerciseSelected(Exercise ex)
         {
