@@ -6,6 +6,11 @@
              xmlns:local="clr-namespace:WorkoutManager.ViewModels"  
              xmlns:model="clr-namespace:WorkoutManager.Models"  
              x:Name="BrowseExercisesPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddExerciseCommand}" />
+    </ContentPage.ToolbarItems>
+    
     <RefreshView x:DataType="local:ExercisesViewModel" Command="{Binding LoadExercisesCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
         <CollectionView x:Name="ExercisesListView"
                 ItemsSource="{Binding Exercises}"
