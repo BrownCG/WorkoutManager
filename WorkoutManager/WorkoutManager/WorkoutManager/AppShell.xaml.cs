@@ -14,6 +14,7 @@ namespace WorkoutManager
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute(nameof(WorkoutDetailPage), typeof(WorkoutDetailPage));
+            Routing.RegisterRoute(nameof(NewExercisePage), typeof(NewExercisePage));
             Routing.RegisterRoute(nameof(ExerciseDetailPage), typeof(ExerciseDetailPage));
         }
 
