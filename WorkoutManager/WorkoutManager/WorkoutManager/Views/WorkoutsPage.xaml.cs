@@ -10,12 +10,21 @@ using Xamarin.Forms.Xaml;
 namespace WorkoutManager.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NewExercisePage : ContentPage
+    public partial class WorkoutsPage : ContentPage
     {
-        public NewExercisePage()
+        WorkoutsViewModel _viewModel;
+
+        public WorkoutsPage()
         {
             InitializeComponent();
-            BindingContext = new NewExerciseViewModel();
+
+            BindingContext = _viewModel = new WorkoutsViewModel();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            _viewModel.OnAppearing();
         }
     }
 }

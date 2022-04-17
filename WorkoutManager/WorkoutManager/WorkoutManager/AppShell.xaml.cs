@@ -13,8 +13,9 @@ namespace WorkoutManager
             InitializeComponent();
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
-            Routing.RegisterRoute(nameof(ExerciseDetailPage), typeof(ExerciseDetailPage));
+            Routing.RegisterRoute(nameof(WorkoutDetailPage), typeof(WorkoutDetailPage));
             Routing.RegisterRoute(nameof(NewExercisePage), typeof(NewExercisePage));
+            Routing.RegisterRoute(nameof(ExerciseDetailPage), typeof(ExerciseDetailPage));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

@@ -61,6 +61,12 @@ namespace WorkoutManager.Services
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
+        public async Task<Exercise> GetExerciseAsync(string id)
+        {
+            return await Task.FromResult(exercises.FirstOrDefault(s => s.Id == id));
+        }
+
+
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);
@@ -71,6 +77,12 @@ namespace WorkoutManager.Services
             exercises.Add(exercise);
             return await Task.FromResult(true);
         }
+
+        public async Task<IEnumerable<Workout>> GetWorkoutsAsync(bool forceRefresh = false)
+        {
+            return await Task.FromResult(workouts);
+        }
+
 
         public async Task<IEnumerable<Exercise>> GetExercisesAsync(bool forceRefresh = false)
         {
